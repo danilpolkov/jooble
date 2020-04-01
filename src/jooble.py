@@ -124,6 +124,7 @@ class preprocess:
 
         self.scaler = scaler
 
+        
     def get_features_num(self, X):
         '''
         parse factor and define features_num
@@ -139,6 +140,7 @@ class preprocess:
         # or redefine normalization
         # self.normalization = 'z-score'
 
+        
     def fit_scaler(self, X):
         '''
         fit scaler on train dataset and save params
@@ -152,6 +154,7 @@ class preprocess:
             self.min, self.max = fit_min_max_scaler(X, self.features_num)
         return
 
+    
     def transform_with_scaler(self, X):
         '''
         transform test dataset with scaler with predefined params from fit_scaler
@@ -171,6 +174,7 @@ class preprocess:
 
         return X
 
+    
     def add_max_feature_index(self, X):
         '''
         add feature max_feature_2_index. it is index of feature that has max value for id_job
@@ -182,6 +186,7 @@ class preprocess:
 
         return X
 
+    
     def add_max_feature_2_abs_mean_diff(self, X):
         '''
         add feature max_feature_2_abs_mean_diff. it is difference between max value among job features
@@ -200,3 +205,4 @@ class preprocess:
                                                   mean_values[indexes])
 
         return X
+    
