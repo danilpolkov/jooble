@@ -2,11 +2,6 @@ import pandas as pd
 import numpy as np
 from numba import jit
 import multiprocessing as mp
-from pathlib import Path
-import sys
-
-PATH = '/Users/danil/Documents/github/jooble'
-sys.path.append(str(PATH))
 
 
 def extract_features(df: pd.DataFrame, column_with_features: str = 'features') -> pd.DataFrame:
