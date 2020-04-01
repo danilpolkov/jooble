@@ -9,9 +9,9 @@ structure:
 |
 |- notebooks   -> folder with notebooks
 |
-|- src         -> folder with necessary functions/scripts
-|
 |- other       -> folder with test task info
+|
+|- src         -> folder with necessary functions/scripts
 |
  ```
  
