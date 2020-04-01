@@ -46,6 +46,10 @@ def prepare_csv(path: str, sep: str = '\t', chunksize: int = 1000) -> pd.DataFra
         dataframe with expanded features to separate columns
     '''
 
+    # I also tried to use dask dataframe lib for reading huge file, 
+    # but it was slower, and got problem with 'extract_features'
+    # function, method 'expand' doesnt work. And my work around 
+    # slows down computetions
     batch_reader = pd.read_csv(filepath_or_buffer=path,
                                sep=sep,
                                chunksize=chunksize,
